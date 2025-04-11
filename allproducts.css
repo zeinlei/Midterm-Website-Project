@@ -1,0 +1,1610 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+  scroll-behavior: smooth;
+  background: #fff8e7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo on left, nav links on right */
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #5e3b2e;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #FFF8E7;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar ul li a {
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  color: #FFF8E7;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #D4A373;
+}
+.nav-links{
+  display: flex;
+}
+
+
+
+/* For larger mobile devices and small tablets */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 3%;
+  }
+  
+  .navbar ul {
+    gap: 1.5rem;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    gap: 1rem;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+}
+/* For very small mobile devices */
+@media screen and (max-width: 320px) {
+  
+  .navbar ul {
+    gap: 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+}
+
+/* For handling mobile menu */
+@media screen and (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* Hero Section */
+.delightfully-crafted-cookies-cakes-cupcakes {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  font-weight: 400;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  font-weight: 400;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+/* Product Sections */
+.product-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.cookies-section, .cakes-section, .cupcakes-section {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+
+.cookies, .cakes, .cupcakes {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 60px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 56px;
+    max-width: 900px;
+    padding: 0 20px;
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 22px;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px 3%;
+  }
+  
+  .navbar ul {
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+  }
+  
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 48px;
+    max-width: 800px;
+    margin-top: 60px;
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 20px;
+    max-width: 700px;
+    margin-top: 40px;
+  }
+  
+  .cookies, .cakes, .cupcakes {
+    font-size: 42px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    gap: 1rem;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+  }
+  
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 42px;
+    max-width: 90%;
+    margin-top: 50px;
+    padding: 0 15px;
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 18px;
+    max-width: 90%;
+    margin-top: 30px;
+    padding: 0 15px;
+  }
+  
+  .cookies, .cakes, .cupcakes {
+    font-size: 36px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 8px 3%;
+  }
+  
+  .navbar ul {
+    gap: 0.8rem;
+  }
+  
+  .navbar ul li a {
+    font-size: 14px;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 36px;
+    max-width: 95%;
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 16px;
+    max-width: 95%;
+    margin-top: 25px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+  
+  .cookies, .cakes, .cupcakes {
+    font-size: 32px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar ul {
+    gap: 0.5rem;
+  }
+  
+  .navbar ul li a {
+    font-size: 12px;
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .cookies, .cakes, .cupcakes {
+    font-size: 28px;
+    margin-top: 25px;
+  }
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+.button, .button2, .button3, .button4 {
+  background: #5d4037;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 47px;
+  cursor: pointer;
+  transition: background 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.button:hover, .button2:hover, .button3:hover, .button4:hover {
+  background: #D4A373;
+}
+
+.state-layer {
+  padding: 10px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  flex: 1;
+}
+
+.label-text {
+  color: #fff8e7;
+  text-align: center;
+  font-family: "Lora-Medium", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+
+/* Add responsive adjustments for buttons */
+@media (max-width: 992px) {
+  .buttons-container {
+    gap: 15px;
+  }
+  
+  .button, .button2, .button3, .button4 {
+    width: 120px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-container {
+    gap: 10px;
+  }
+  
+  .button, .button2, .button3, .button4 {
+    width: 100px;
+    height: 40px;
+  }
+  
+  .label-text {
+    font-size: 14px;
+  }
+}
+
+/* Hide buttons on mobile phones */
+@media (max-width: 576px) {
+  .buttons-container {
+    display: none; /* This hides the entire buttons container */
+  }
+}
+
+/* product section */ 
+/* Card Container */ 
+.card { 
+  position: relative; 
+  display: inline-block; 
+  width: 300px; 
+  height: 300px; 
+  margin: 20px; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+  /* Animation for zoom-in effect */
+  transition: transform 0.4s ease-out, box-shadow 0.3s ease;
+} 
+
+/* Card Image */ 
+.card-image { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 15px; 
+  transition: transform 0.5s ease; 
+} 
+
+/* Overlay for Hover Effect */ 
+.overlay { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background for the overlay */ 
+  opacity: 0; /* Hidden initially */ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transition: opacity 0.5s ease; 
+  border-radius: 15px; 
+  width: 300px;
+  /* Added for smooth fade-in animation */
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.4s ease;
+} 
+
+/* Overlay Text */ 
+.overlay-text { 
+  font-family: "Lora", serif; 
+  font-size: 36px; 
+  color: #fff8e7; 
+  font-weight: 500; 
+  text-align: center;
+  /* Animation for text reveal */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+} 
+
+/* Show Overlay on Hover */ 
+.card:hover .overlay { 
+  opacity: 1; /* Make overlay visible when hovering */
+  transform: translateY(0);
+} 
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover .card-image { 
+  transform: scale(1.1); /* Slightly zoom in the image on hover */ 
+} 
+
+.card:hover .overlay { 
+  opacity: 1; 
+} 
+
+.card:hover .overlay-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Link */ 
+.card-link { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  z-index: 10; 
+  display: block; 
+} 
+
+
+/* Responsive Design */ 
+@media (max-width: 1024px) { 
+  /* Tablets */ 
+  .browse-our-collection { 
+    font-size: 5vw; 
+  } 
+  .card { 
+    width: 30vw; 
+    height: 30vw; 
+  } 
+  .overlay-text { 
+    font-size: 2.5vw; 
+    margin-left: -3rem; 
+  } 
+  .overlay {
+    width: 100%;
+  }
+} 
+
+@media (max-width: 991px) and (min-width: 768px) { 
+  .card { 
+    margin: 15px auto; 
+    width: 90%; 
+    height: 35vw; 
+  } 
+  .overlay-text { 
+    font-size: 30px; 
+  } 
+  .overlay {
+    width: 100%;
+  }
+} 
+
+@media (max-width: 768px) { 
+  /* Phones */ 
+  .browse-our-collection { 
+    font-size: 6vw; 
+  } 
+  .card { 
+    width: 40vw; 
+    height: 40vw; 
+  } 
+  .overlay-text { 
+    font-size: 3.5vw; 
+  } 
+  .overlay {
+    width: 100%;
+  }
+} 
+
+@media (max-width: 576px) { 
+  .collection-section { 
+    padding: 30px 10px; 
+  } 
+  .browse-our-collection { 
+    font-size: 7vw; 
+  } 
+  .card { 
+    width: 90%; 
+    height: 60vw; 
+    margin: 10px auto; 
+  } 
+  .overlay-text { 
+    font-size: 24px; 
+  } 
+  .overlay {
+    width: 100%;
+  }
+} 
+
+@media (max-width: 480px) { 
+  /* Small Phones */ 
+  .browse-our-collection { 
+    font-size: 8vw; 
+  } 
+  .card { 
+    width: 80vw; 
+    height: 80vw; 
+  } 
+  .overlay-text { 
+    font-size: 4.5vw; 
+  } 
+} 
+
+/* Extra Small Phones */ 
+@media (max-width: 375px) { 
+  .card { 
+    height: 80vw; 
+  } 
+  .browse-our-collection { 
+    margin-bottom: 15px; 
+  } 
+} 
+
+/* Touch Device Support */ 
+@media (hover: none) { 
+  .overlay { 
+    opacity: 0.8; /* Always show overlay on touch devices, but slightly transparent */ 
+    background-color: rgba(0, 0, 0, 0.5); 
+    transform: translateY(0);
+  } 
+  .card-image { 
+    transform: scale(1.03); /* Slight zoom by default */ 
+  } 
+  .overlay-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Group sections into their own sections */
+.product-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.category-title {
+  color: #2e2e2e;
+  font-family: 'Great Vibes', cursive;
+  text-align: left;
+  margin-left: 70px;
+  font-size: 64px;
+  font-weight: 400;
+}
+
+.product-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Set the gap between images to 5px */
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 0 15px; /* To prevent images touching the sides */
+}
+.product-price {
+  font-size: 1.2em;
+  color: #666; 
+  display: block; /* Optional: If you want the price on a new line */
+}
+
+
+/* Card-style image container */
+.product-images a {
+  display: block;
+  width: calc(20% - 10px); /* Each image takes up 25% width, minus the gap */
+  height: 250px; /* Fixed height for images */
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for card effect */
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none; /* Remove underline */
+  margin-bottom: 20px; /* Space between rows */
+  position: relative;
+}
+
+/* Image styling inside the card */
+.product-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Product overlay - placed in front of the image */
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.4s ease;
+  transform: translateY(10px);
+  z-index: 2; /* Ensures overlay is in front */
+  border-radius: 15px;
+  flex-direction: column;
+}
+
+/* Product title styling */
+.product-title {
+  color: #fff8e7;
+  font-family: "Lora", serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+}
+
+.product-overlay .product-price {
+  color: #fff8e7; /* Match color with title */
+  font-size: 18px;
+  margin-top: 8px; /* Space between title and price */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+}
+.product-images a:hover .product-overlay .product-price {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Hover effect on card */
+.product-images a:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+/* Hover effect on the image itself */
+.product-images a:hover img {
+  transform: scale(1.1); /* Image scale on hover */
+}
+
+/* Show overlay on hover */
+.product-images a:hover .product-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Show product title on hover */
+.product-images a:hover .product-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .product-images a {
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height for square aspect ratio */
+    margin: 0 5px 20px; /* Margin on sides */
+  }
+  .category-title {
+    margin-left: 40px;
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .product-images a {
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    margin: 0 10px 20px; /* Increased margins on sides */
+  }
+  .category-title {
+    margin-left: 30px;
+    font-size: 48px;
+  }
+  .buttons-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .product-images a {
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
+  }
+  .category-title {
+    margin-left: 20px;
+    font-size: 42px;
+    text-align: center;
+  }
+  .cookies, .cakes, .cupcakes {
+    font-size: 40px;
+    margin-top: 40px;
+  }
+  .buttons-container {
+    gap: 15px;
+    margin-top: 60px;
+  }
+  .product-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .product-images a {
+    width: 250px; /* Fixed width */
+    height: 250px; /* Fixed height */
+    margin: 0 auto 20px; /* Center the image with auto margins */
+  }
+  .button, .button2, .button3, .button4 {
+    width: 120px;
+    height: 40px;
+  }
+  .label-text {
+    font-size: 14px;
+  }
+  .category-title {
+    font-size: 36px;
+    margin-left: 0;
+  }
+  .cookies, .cakes, .cupcakes {
+    font-size: 32px;
+    margin-top: 30px;
+  }
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+  }
+  .product-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .product-section {
+    padding: 30px 0;
+  }
+  .category-title {
+    font-size: 32px;
+  }
+  .product-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* Touch Device Support */
+@media (hover: none) {
+  .product-overlay {
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(0);
+  }
+  .product-title {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .product-images a:hover {
+    transform: none;
+  }
+  .product-images a:hover img {
+    transform: scale(1.03);
+  }
+}
+
+/* Contact Section Styling */
+/* Global reset */
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and general structure */
+.desktop-8 {
+  background: #7f4b3b;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 0;
+  margin-top: 100px;
+}
+
+/* Rectangle 7 - Main content (Logo, Message) */
+.rectangle-7 {
+  border-radius: 50px;
+  width: 100%;
+  height: auto;
+  min-height: 70vh;
+  position: relative;
+  margin: 0 auto;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
+/* Centered logo */
+.header-logo-3 {
+  opacity: 0.5;
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+/* Contact information styles */
+.contact-info {
+  color: #fff8e7;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  position: relative;
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 300px;
+}
+
+/* Large message text with responsiveness */
+.message-us {
+  color: #fff8e7;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem; /* Base font size */
+  font-weight: 200;
+  position: relative;
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 1090px;
+}
+
+/* Social icons */
+.social-icons {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social-icons i {
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+}
+
+/* Rectangle 15 (container for social media and other content) */
+.rectangle-15 {
+  background: rgba(217, 217, 217, 0);
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #fdf2e3;
+  border-width: 3px;
+  width: 90%;
+  max-width: 699px;
+  height: auto;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Design for Medium Screens (e.g., tablets) */
+@media screen and (max-width: 1024px) {
+  .rectangle-7 {
+    width: 85%;
+  }
+
+  .message-us {
+    font-size: 1.8rem; /* Reduced size for smaller screens */
+  }
+
+  .header-logo-3 {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .social-icons i {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+@media screen and (max-width: 768px) {
+  .rectangle-7 {
+    width: 90%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.6rem; /* Slightly smaller for readability */
+  }
+
+  .header-logo-3 {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .social-icons i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-info {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 480px) {
+  .rectangle-7 {
+    width: 95%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.4rem; /* Further reduced size for mobile */
+  }
+
+  .header-logo-3 {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .social-icons i {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile Devices (Phones in Portrait mode) */
+@media screen and (max-width: 360px) {
+  .rectangle-7 {
+    width: 100%;
+  }
+
+  .message-us {
+    font-size: 1.2rem; /* Even smaller for very small screens */
+  }
+
+  .header-logo-3 {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .social-icons i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #fff8e7; /* Same color as the main section */
+    color: #7f4b3b;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: -10px;
+  }
+  
+  .footer-content p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  
+  /* Social icons and other elements */
+  .social-icons {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .social-icons i {
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Responsive Design for Medium Screens (e.g., tablets) */
+  @media screen and (max-width: 1024px) {
+    /* Adjust Rectangle 7 for better display on medium screens */
+    .rectangle-7 {
+      width: 85%;
+      padding: 1rem;
+    }
+  
+    /* Reduce font size of message */
+    .message-us {
+      font-size: 1.6rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 20vw;
+      height: 20vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 35px;
+      height: 35px;
+    }
+  
+    /* Adjust font size of contact info */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+  @media screen and (max-width: 768px) {
+    .rectangle-7 {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    /* Slightly smaller message font size */
+    .message-us {
+      font-size: 1.5rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 25vw;
+      height: 25vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 30px;
+      height: 30px;
+    }
+  
+    /* Slightly larger contact info font size */
+    .contact-info {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Responsive Design for Mobile Screens */
+  @media screen and (max-width: 480px) {
+    .rectangle-7 {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    /* Adjust message font size for mobile */
+    .message-us {
+      font-size: 1.4rem;
+    }
+  
+    /* Adjust logo size for mobile */
+    .header-logo-3 {
+      width: 30vw;
+      height: 30vw;
+    }
+  
+    /* Reduce social icon size for mobile */
+    .social-icons i {
+      width: 25px;
+      height: 25px;
+    }
+  
+    /* Adjust contact info font size for mobile */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extra Small Mobile Devices (Phones in Portrait mode) */
+  @media screen and (max-width: 360px) {
+    .rectangle-7 {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    /* Further reduce message font size */
+    .message-us {
+      font-size: 1.2rem;
+    }
+  
+    /* Reduce logo size further for very small screens */
+    .header-logo-3 {
+      width: 35vw;
+      height: 35vw;
+    }
+  
+    /* Reduce social icon size further */
+    .social-icons i {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Further reduce contact info font size */
+    .contact-info {
+      font-size: 0.9rem;
+    }
+  }
+  
+
+  
+/* Contact Section Styling */
+/* Global reset */
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and general structure */
+.desktop-8 {
+  background: #7f4b3b;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 0;
+  margin-top: 100px;
+}
+
+/* Rectangle 7 - Main content (Logo, Message) */
+.rectangle-7 {
+  border-radius: 50px;
+  width: 100%;
+  height: auto;
+  min-height: 70vh;
+  position: relative;
+  margin: 0 auto;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
+/* Centered logo */
+.header-logo-3 {
+  opacity: 0.5;
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+/* Contact information styles */
+.contact-info {
+  color: #fff8e7;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  position: relative;
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 300px;
+}
+
+/* Large message text with responsiveness */
+.message-us {
+  color: #fff8e7;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem; /* Base font size */
+  font-weight: 200;
+  position: relative;
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 1090px;
+}
+
+.social-icons a {
+  color: #fdf2e3;
+  font-size: 24px;
+  margin: 0 0;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f08a5d; /* change to your preferred hover color */
+}
+
+
+/* Rectangle 15 (container for social media and other content) */
+.rectangle-15 {
+  background: rgba(217, 217, 217, 0);
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #fdf2e3;
+  border-width: 3px;
+  width: 90%;
+  max-width: 699px;
+  height: auto;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Design for Medium Screens (e.g., tablets) */
+@media screen and (max-width: 1024px) {
+  .rectangle-7 {
+    width: 85%;
+  }
+
+  .message-us {
+    font-size: 1.8rem; /* Reduced size for smaller screens */
+  }
+
+  .header-logo-3 {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .social-icons i {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+@media screen and (max-width: 768px) {
+  .rectangle-7 {
+    width: 90%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.6rem; /* Slightly smaller for readability */
+  }
+
+  .header-logo-3 {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .social-icons i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-info {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 480px) {
+  .rectangle-7 {
+    width: 95%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.4rem; /* Further reduced size for mobile */
+  }
+
+  .header-logo-3 {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .social-icons i {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile Devices (Phones in Portrait mode) */
+@media screen and (max-width: 360px) {
+  .rectangle-7 {
+    width: 100%;
+  }
+
+  .message-us {
+    font-size: 1.2rem; /* Even smaller for very small screens */
+  }
+
+  .header-logo-3 {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .social-icons i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #fff8e7; /* Same color as the main section */
+    color: #7f4b3b;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: -10px;
+  }
+  
+  .footer-content p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  
+  /* Social icons and other elements */
+  .social-icons {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .social-icons i {
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Responsive Design for Medium Screens (e.g., tablets) */
+  @media screen and (max-width: 1024px) {
+    /* Adjust Rectangle 7 for better display on medium screens */
+    .rectangle-7 {
+      width: 85%;
+      padding: 1rem;
+    }
+  
+    /* Reduce font size of message */
+    .message-us {
+      font-size: 1.6rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 20vw;
+      height: 20vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 35px;
+      height: 35px;
+    }
+  
+    /* Adjust font size of contact info */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+  @media screen and (max-width: 768px) {
+    .rectangle-7 {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    /* Slightly smaller message font size */
+    .message-us {
+      font-size: 1.5rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 25vw;
+      height: 25vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 30px;
+      height: 30px;
+    }
+  
+    /* Slightly larger contact info font size */
+    .contact-info {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Responsive Design for Mobile Screens */
+  @media screen and (max-width: 480px) {
+    .rectangle-7 {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    /* Adjust message font size for mobile */
+    .message-us {
+      font-size: 1.4rem;
+    }
+  
+    /* Adjust logo size for mobile */
+    .header-logo-3 {
+      width: 30vw;
+      height: 30vw;
+    }
+  
+    /* Reduce social icon size for mobile */
+    .social-icons i {
+      width: 25px;
+      height: 25px;
+    }
+  
+    /* Adjust contact info font size for mobile */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extra Small Mobile Devices (Phones in Portrait mode) */
+  @media screen and (max-width: 360px) {
+    .rectangle-7 {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    /* Further reduce message font size */
+    .message-us {
+      font-size: 1.2rem;
+    }
+  
+    /* Reduce logo size further for very small screens */
+    .header-logo-3 {
+      width: 35vw;
+      height: 35vw;
+    }
+  
+    /* Reduce social icon size further */
+    .social-icons i {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Further reduce contact info font size */
+    .contact-info {
+      font-size: 0.9rem;
+    }
+  }
+  

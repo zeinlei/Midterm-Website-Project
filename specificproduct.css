@@ -1,0 +1,1044 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lora', serif;
+  scroll-behavior: smooth;
+  background: #fff8e7;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Adjusts scroll position when clicking on product links */
+section[id^="product-"] {
+  scroll-margin-top: 70px; /* Adjust this value based on your navbar height */
+}
+
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #5e3b2e;
+  color: white;
+  position: -webkit-sticky; /* For Safari */
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%; /* Ensure it takes up the full width of the viewport */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #FFF8E7;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar ul li a {
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  color: #FFF8E7;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #D4A373;
+}
+
+
+/* For larger mobile devices and small tablets */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 3%;
+  }
+  
+  .navbar ul {
+    gap: 1.5rem;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    gap: 1rem;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+}
+/* For very small mobile devices */
+@media screen and (max-width: 320px) {
+  
+  .navbar ul {
+    gap: 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+}
+
+/* For handling mobile menu */
+@media screen and (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* Hero Section */
+.delightfully-crafted-cookies-cakes-cupcakes {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem; /* Adjusted for responsiveness */
+  font-weight: 400;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 1.5rem; /* Adjusted for readability */
+  font-weight: 400;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+/* Product Section */
+.warm-cookies-endless-sweet-satisfaction {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem; /* Adjusted size */
+  font-weight: 400;
+  max-width: 100%;
+  margin: 0 auto;
+}
+ /*Product Section*/
+.all-cookie-products {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Lora', serif;
+  font-size: 2.25rem; /* Adjusted for mobile */
+  font-weight: 400;
+  margin-top: 60px;
+}
+
+/* Ensures the product name and description align correctly */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Product name styling */
+.name-of-product, .name-of-product2, .name-of-product3, .name-of-product4 {
+  color: #2e2e2e;
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: -300px; 
+  margin-bottom: 20px;/* Remove negative margin */
+  -webkit-text-stroke: 1px #000000;
+  text-align: center;
+  margin-left: 300px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Image styling */
+.logos-1, .logos-2, .logos-22, .logos-23 {
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #5d4037;
+  border-width: 2px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-width: 300px;
+  margin-left: 130px; /* Ensures the images are centered */
+  margin-right: auto; /* Ensures the images are centered */
+  aspect-ratio: 1;
+  margin-top: 130px; /* Space between image and text */
+  display: block; /* Ensure it's treated as a block-level element */
+}
+
+/* Cake description styling */
+.cake1-description, .cake2-description, .cake3-description, .cake4-description {
+  color: #2e2e2e;
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+  max-width: 600px;
+  margin-left: 350px;
+  margin-top: 10px; /* Space between name and description */
+  line-height: 1.6;
+  width: 100%;
+}
+
+/* Default (desktop and larger devices) */
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Adds space between items */
+  flex-wrap: wrap;
+}
+.product-price {
+  font-weight: bold;
+  color: #2e2e2e;
+  margin-right: 150px;
+}
+
+
+/* Navigation button styling adjusted for your specific image layout */
+.nav-btn {
+  position: absolute;
+  top: 130px;
+  margin-left: -20px; /* Adjusted to align with the image vertical center (130px margin-top + 150px center point) */
+  background-color: rgba(94, 59, 46, 0.7);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 110px; /* Adjusted to appear just to the left of the image */
+}
+
+.next-btn {
+  left: 450px; /* Adjusted to appear just to the right of the image (100px + 250px width + 60px) */
+}
+
+.nav-btn:hover {
+  background-color: rgba(94, 59, 46, 0.9);
+  transform: scale(1.1);
+}
+
+/* Ensure the card has correct positioning for absolute elements */
+.card {
+  position: relative;
+  overflow: visible;
+}
+
+/* Add hover state to show buttons when hovering on card */
+.card:hover .nav-btn {
+  opacity: 1;
+}
+
+
+/* For devices smaller than 1200px (large tablets, small desktops) */
+@media (max-width: 1200px) {
+  .nav-btn {
+    top: 100px;
+    margin-left: -130px;
+    position: absolute;
+  }
+  
+  .prev-btn {
+    left: calc(50% - 250px);
+  }
+  
+  .next-btn {
+    left: auto;
+    right: calc(50% - 150px);
+  }
+  
+  .name-of-product, .name-of-product2, .name-of-product3, .name-of-product4 {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .cake1-description, .cake2-description, .cake3-description, .cake4-description {
+    margin-left: 0;
+    text-align: center;
+    max-width: 90%;
+  }
+  
+  /* Modified to maintain horizontal alignment */
+  .logos-1, .logos-2, .logos-22, .logos-23 {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-top: 80px  /* Add space to the right of the logos */
+  }
+  
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  /* Add a logos container to maintain horizontal alignment */
+  .logos-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+  }
+}
+
+
+
+
+/* For devices smaller than 1200px (large tablets, small desktops) */
+@media (max-width: 1200px) {
+  .nav-btn {
+    top: 100px;
+    margin-left: -130px;
+    margin-right: -78px;
+    margin-top: 60px;
+  }
+  .prev-btn {
+    left: calc(50% - 230px); /* Adjusted for the product layout */
+  }
+
+  .next-btn {
+    right: calc(50% - 230px); /* Adjusted for the product layout */
+  }
+}
+
+/* For devices smaller than 1024px (tablets) */
+@media (max-width: 1024px) {
+  .prev-btn {
+    left: calc(50% - 220px); /* Adjusted for tablet layout */
+  }
+
+  .next-btn {
+    right: calc(50% - 220px); /* Adjusted for tablet layout */
+  }
+}
+
+/* For devices smaller than 768px (mobile) */
+@media (max-width: 768px) {
+  .nav-btn {
+    top: 100px;
+    margin-left: -130px;
+    margin-right: -78px;
+    margin-top: 60px;
+  }
+  .prev-btn {
+    left: calc(50% - 98px); /* Adjusted for mobile layout */
+  }
+
+  .next-btn {
+    right: calc(50% - 150px); /* Adjusted for mobile layout */
+  }
+}
+
+/* For devices smaller than 480px (mobile portrait) */
+@media (max-width: 480px) {
+  .nav-btn {
+    top: 100px;
+    margin-left: -130px;
+    margin-right: -78px;
+    margin-top: 60px;
+  }
+  .prev-btn {
+    left: calc(50% - 120px); /* Adjusted for smaller mobile layout */
+  }
+
+  .next-btn {
+    right: calc(50% - 120px); /* Adjusted for smaller mobile layout */
+  }
+}
+
+/* For extra small devices */
+@media (max-width: 320px) {
+  .nav-btn {
+    top: 100px;
+    margin-left: -130px;
+    margin-right: -78px;
+    margin-top: 60px;
+  }
+  .prev-btn {
+    left: calc(50% - 100px); /* Adjusted for extra small mobile layout */
+  }
+
+  .next-btn {
+    right: calc(50% - 100px); /* Adjusted for extra small mobile layout */
+  }
+}
+
+
+
+/* For devices smaller than 1200px (large tablets, small desktops) */
+@media (max-width: 1200px) {
+  .name-of-product, .name-of-product2, .name-of-product3, .name-of-product4 {
+    margin-left: 0;
+    margin-top: 20px;
+    text-align: center; /* Center the product names */
+  }
+  
+  .cake1-description, .cake2-description, .cake3-description, .cake4-description {
+    margin-left: 0;
+    text-align: center; /* Center the descriptions */
+    max-width: 90%;
+  }
+  
+  .logos-1, .logos-2, .logos-22, .logos-23 {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-top: 80px  /* Add space to the right of the logos */
+  }
+  
+  .product-container {
+    flex-direction: column;
+    align-items: center; /* Center all products */
+    justify-content: center;
+  }
+  .product-price {
+    margin-right: 0; /* Remove right margin */
+    text-align: center;
+    margin: 10px auto; /* Center with auto margins */
+    width: 100%;
+    display: block;
+  }
+}
+
+/* For devices smaller than 1024px (tablets) */
+@media (max-width: 1024px) {
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 3.5rem;
+    text-align: center; /* Center the title */
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 1.3rem;
+    padding: 0 20px;
+    text-align: center; /* Center the description */
+  }
+  
+  .warm-cookies-endless-sweet-satisfaction {
+    font-size: 2.8rem;
+    text-align: center; /* Center the heading */
+  }
+  
+  .all-cookie-products {
+    font-size: 2rem;
+    text-align: center; /* Center the section title */
+  }
+  
+  .logos-1, .logos-2, .logos-22, .logos-23 {
+    max-width: 60%;
+    margin: 0 auto; /* Center the images */
+    margin-right: 100px; /* Add space to the right of the logos */
+  }
+
+  .name-of-product, .name-of-product2, .name-of-product3, .name-of-product4 {
+    font-size: 30px;
+    text-align: center; /* Center the product names */
+  }
+  
+  .cake1-description, .cake2-description, .cake3-description, .cake4-description {
+    font-size: 16px;
+    text-align: center; /* Center the descriptions */
+  }
+  .product-price {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
+
+/* For devices smaller than 768px (mobile) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 3%;
+  }
+  
+  .navbar ul {
+    gap: 1.5rem;
+    text-align: center; /* Center the navigation links */
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    text-align: center; /* Center the logo */
+  }
+  
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 3rem;
+    padding: 0 10px;
+    text-align: center; /* Center the heading */
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 1.2rem;
+    padding: 0 15px;
+    text-align: center; /* Center the description */
+  }
+  
+  .warm-cookies-endless-sweet-satisfaction {
+    font-size: 2.5rem;
+    text-align: center; /* Center the heading */
+  }
+  
+  .all-cookie-products {
+    font-size: 1.8rem;
+    text-align: center; /* Center the section title */
+  }
+  
+  .logos-1, .logos-2, .logos-22, .logos-23 {
+    max-width: 60%;
+    margin: 0 auto; /* Center the images */
+    margin-top: 80px /* Add space to the right of the logos */
+  }
+  
+  .name-of-product, .name-of-product2, .name-of-product3, .name-of-product4 {
+    font-size: 28px;
+    margin-top: 20px;
+    text-align: center; /* Center the product names */
+  }
+  
+  .cake1-description, .cake2-description, .cake3-description, .cake4-description {
+    font-size: 15px;
+    text-align: center; /* Center the descriptions */
+    margin-top: 10px;
+  }
+  .product-price {
+    font-size: 17px;
+    text-align: center;
+    margin-right: 0; /* Remove right margin */
+    margin: 10px auto; /* Center with auto margins */
+  }
+}
+
+/* For devices smaller than 480px (mobile portrait) */
+@media (max-width: 480px) {
+  .navbar ul {
+    gap: 1rem;
+    text-align: center; /* Center the navigation links */
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    text-align: center; /* Center the logo */
+  }
+  
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 2.5rem;
+    margin-top: 90px;
+    text-align: center; /* Center the heading */
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center; /* Center the description */
+  }
+  
+  .warm-cookies-endless-sweet-satisfaction {
+    font-size: 2.2rem;
+    text-align: center; /* Center the heading */
+  }
+  
+  .all-cookie-products {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    text-align: center; /* Center the section title */
+  }
+  
+  .logos-1, .logos-2, .logos-22, .logos-23 {
+    max-width: 85%;
+    margin-top: 30px;
+    margin: 0 auto; /* Center the images */
+    margin-top: 80px /* Add space to the right of the logos */
+  }
+  
+  .name-of-product, .name-of-product2, .name-of-product3, .name-of-product4 {
+    font-size: 24px;
+    text-align: center; /* Center the product names */
+    -webkit-text-stroke: 0.5px #000000;
+  }
+  
+  .cake1-description, .cake2-description, .cake3-description, .cake4-description {
+    font-size: 14px;
+    text-align: center; /* Center the descriptions */
+    padding: 0 5px;
+  }
+  .product-price {
+    font-size: 16px;
+    text-align: center;
+    margin-right: 0; /* Remove right margin */
+    margin: 10px auto; /* Center with auto margins */
+  }
+}
+
+/* For extra small devices */
+@media (max-width: 320px) {
+  .navbar ul {
+    gap: 0.7rem;
+    text-align: center; /* Center the navigation links */
+  }
+  
+  .delightfully-crafted-cookies-cakes-cupcakes {
+    font-size: 2.2rem;
+    text-align: center; /* Center the heading */
+    margin-top: 20px;
+  }
+  
+  .handmade-with-passion-and-the-finest-ingredients-since-2025-we-bake-fresh-daily-and-package-with-care-ensuring-every-treat-arrives-as-delicious-as-when-it-left-the-oven-warm-them-up-for-that-fresh-from-the-oven-magic {
+    font-size: 0.9rem;
+    text-align: center; /* Center the description */
+  }
+  
+  .warm-cookies-endless-sweet-satisfaction {
+    font-size: 2rem;
+    text-align: center; /* Center the heading */
+  }
+  
+  .all-cookie-products {
+    font-size: 1.4rem;
+    text-align: center; /* Center the section title */
+  }
+  
+  .logos-1, .logos-2, .logos-22, .logos-23 {
+    max-width: 80%;
+    margin: 0 auto; /* Center the images */
+    margin-top: 80px  /* Add space to the right of the logos */
+  }
+  
+  .name-of-product, .name-of-product2, .name-of-product3, .name-of-product4 {
+    font-size: 22px;
+    text-align: center; /* Center the product names */
+  }
+  
+  .cake1-description, .cake2-description, .cake3-description, .cake4-description {
+    font-size: 13px;
+    text-align: center; /* Center the descriptions */
+    padding: 0 5px;
+  }
+  .product-price {
+    font-size: 15px;
+    text-align: center;
+    margin-right: 0; /* Remove right margin */
+    margin: 10px auto; /* Center with auto margins */
+  }
+}
+
+
+/* Contact Section Styling */
+/* Global reset */
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and general structure */
+.desktop-8 {
+  background: #7f4b3b;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 0;
+  margin-top: 100px;
+}
+
+/* Rectangle 7 - Main content (Logo, Message) */
+.rectangle-7 {
+  border-radius: 50px;
+  width: 100%;
+  height: auto;
+  min-height: 70vh;
+  position: relative;
+  margin: 0 auto;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
+/* Centered logo */
+.header-logo-3 {
+  opacity: 0.5;
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+/* Contact information styles */
+.contact-info {
+  color: #fff8e7;
+  text-align: center;
+  font-family: "Lora-Regular", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  position: relative;
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 300px;
+}
+
+/* Large message text with responsiveness */
+.message-us {
+  color: #fff8e7;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem; /* Base font size */
+  font-weight: 200;
+  position: relative;
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 1090px;
+}
+
+.social-icons a {
+  color: #fdf2e3;
+  font-size: 24px;
+  margin: 0 0;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f08a5d; /* change to your preferred hover color */
+}
+
+
+/* Rectangle 15 (container for social media and other content) */
+.rectangle-15 {
+  background: rgba(217, 217, 217, 0);
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #fdf2e3;
+  border-width: 3px;
+  width: 90%;
+  max-width: 699px;
+  height: auto;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Design for Medium Screens (e.g., tablets) */
+@media screen and (max-width: 1024px) {
+  .rectangle-7 {
+    width: 85%;
+  }
+
+  .message-us {
+    font-size: 1.8rem; /* Reduced size for smaller screens */
+  }
+
+  .header-logo-3 {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .social-icons i {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+@media screen and (max-width: 768px) {
+  .rectangle-7 {
+    width: 90%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.6rem; /* Slightly smaller for readability */
+  }
+
+  .header-logo-3 {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .social-icons i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-info {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 480px) {
+  .rectangle-7 {
+    width: 95%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.4rem; /* Further reduced size for mobile */
+  }
+
+  .header-logo-3 {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .social-icons i {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile Devices (Phones in Portrait mode) */
+@media screen and (max-width: 360px) {
+  .rectangle-7 {
+    width: 100%;
+  }
+
+  .message-us {
+    font-size: 1.2rem; /* Even smaller for very small screens */
+  }
+
+  .header-logo-3 {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .social-icons i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #fff8e7; /* Same color as the main section */
+    color: #7f4b3b;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: -10px;
+  }
+  
+  .footer-content p {
+    font-family: "Lora-Regular", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  
+  /* Social icons and other elements */
+  .social-icons {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .social-icons i {
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Responsive Design for Medium Screens (e.g., tablets) */
+  @media screen and (max-width: 1024px) {
+    /* Adjust Rectangle 7 for better display on medium screens */
+    .rectangle-7 {
+      width: 85%;
+      padding: 1rem;
+    }
+  
+    /* Reduce font size of message */
+    .message-us {
+      font-size: 1.6rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 20vw;
+      height: 20vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 35px;
+      height: 35px;
+    }
+  
+    /* Adjust font size of contact info */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+  @media screen and (max-width: 768px) {
+    .rectangle-7 {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    /* Slightly smaller message font size */
+    .message-us {
+      font-size: 1.5rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 25vw;
+      height: 25vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 30px;
+      height: 30px;
+    }
+  
+    /* Slightly larger contact info font size */
+    .contact-info {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Responsive Design for Mobile Screens */
+  @media screen and (max-width: 480px) {
+    .rectangle-7 {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    /* Adjust message font size for mobile */
+    .message-us {
+      font-size: 1.4rem;
+    }
+  
+    /* Adjust logo size for mobile */
+    .header-logo-3 {
+      width: 30vw;
+      height: 30vw;
+    }
+  
+    /* Reduce social icon size for mobile */
+    .social-icons i {
+      width: 25px;
+      height: 25px;
+    }
+  
+    /* Adjust contact info font size for mobile */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extra Small Mobile Devices (Phones in Portrait mode) */
+  @media screen and (max-width: 360px) {
+    .rectangle-7 {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    /* Further reduce message font size */
+    .message-us {
+      font-size: 1.2rem;
+    }
+  
+    /* Reduce logo size further for very small screens */
+    .header-logo-3 {
+      width: 35vw;
+      height: 35vw;
+    }
+  
+    /* Reduce social icon size further */
+    .social-icons i {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Further reduce contact info font size */
+    .contact-info {
+      font-size: 0.9rem;
+    }
+  }
+  

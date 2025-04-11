@@ -1,0 +1,1430 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lora', serif;
+    scroll-behavior: smooth;
+    background: #fff8e7;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #5e3b2e;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: #FFF8E7;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+  }
+  
+  .navbar ul li a {
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    color: #FFF8E7;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover {
+    color: #D4A373;
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  /* Carousel Fullscreen */
+  .desktop-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .carousel-inner,
+  .carousel-item,
+  .carousel-image {
+    height: 100vh;
+  }
+  
+  .carousel-image {
+    object-fit: cover;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item:hover .carousel-image {
+    transform: scale(1.03);
+    filter: brightness(0.9);
+  }
+  
+   /* Ensures all .carousel-item elements are stacked properly */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+ 
+  .carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  
+  .carousel-item.active {
+    position: relative;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+  }
+  
+ 
+ 
+  
+  /* Overlay layer for contrast */
+  .rectangle-16 {
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  /* Headline text */
+  .where-every-bite-is-a-touch-of-magic {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #fff8e7;
+    text-shadow: 2px 2px 10px #000;
+  }
+  
+  
+  /* Fade-up animation */
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -60%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+  
+  .animate-text {
+    animation: fadeUp 2s ease-out forwards;
+  }
+
+  /* Media Queries for Responsiveness */
+
+/* For tablets and smaller laptops */
+@media screen and (max-width: 1024px) {
+  .where-every-bite-is-a-touch-of-magic {
+    font-size: 4rem;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+  }
+}
+
+/* For larger mobile devices and small tablets */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 3%;
+  }
+  
+  .navbar ul {
+    gap: 1.5rem;
+  }
+  
+  .where-every-bite-is-a-touch-of-magic {
+    font-size: 3rem;
+    width: 90%;
+  }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    gap: 1rem;
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .where-every-bite-is-a-touch-of-magic {
+    font-size: 2.5rem;
+  }
+  
+  .desktop-1 {
+    height: calc(100vh - 80px); /* Adjust for the navbar height */
+  }
+  
+  .carousel-inner,
+  .carousel-item,
+  .carousel-image {
+    height: calc(100vh - 80px);
+  }
+}
+
+/* For very small mobile devices */
+@media screen and (max-width: 320px) {
+  .where-every-bite-is-a-touch-of-magic {
+    font-size: 2rem;
+  }
+  
+  .navbar ul {
+    gap: 0.7rem;
+    font-size: 0.8rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+}
+
+/* For handling mobile menu */
+@media screen and (max-width: 640px) {
+  .nav-links {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* For landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .desktop-1 {
+    height: 100vh;
+  }
+  
+  .where-every-bite-is-a-touch-of-magic {
+    font-size: 2.2rem;
+  }
+}
+  
+ /* Section and Layout */
+ #about {
+  padding: 200px 0;
+  background: #fff8e7;
+  margin-top: -100px;
+}
+
+/* About Header */
+.about {
+  color: #2e2e2e;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  font-weight: 400;
+  margin-top: -170px;
+  margin-left: 170px;
+}
+
+/* Main Container - Flex Layout */
+.desktop-6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* Descriptions & Logo Container */
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+/* Descriptions */
+.loki-bake-shop-description, .we-combine-description {
+  color: #2e2e2e;
+  text-align: left;
+  font-family: 'Lora', serif;
+  font-size: 24px;
+  max-width: 500px;
+  margin-top: 50px;
+  margin-right: 100px;
+  font-weight: 400;
+  margin-left: -175px;
+}
+
+/* Logo Style */
+.logos-1 {
+border-radius: 15px;
+border-style: solid;
+border-color: #5d4037;
+border-width: 2px;
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+transition: opacity 1.2s ease; /* Simple fade transition */
+}
+
+/* Active image class */
+.active {
+opacity: 1;
+}
+
+/* Card Container */
+.card-container {
+position: relative;
+width: 350px;
+height: 350px;
+border-radius: 15px;
+border: 2px solid #5d4037;
+overflow: hidden;
+margin: 0 auto;
+}
+
+/* Logo Slider */
+.logo-slider {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+/* Enhanced Responsive Styles */
+@media (max-width: 1399px) {
+  .about {
+      margin-left: 200px;
+      margin-top: -170px; /* Adjusted to prevent navbar overlap */
+  }
+  .we-combine-description, .loki-bake-shop-description {
+      margin-left: -150px;
+      margin-right: 80px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .about {
+      font-size: 58px;
+      margin-left: 50px;
+      margin-top: -130px; /* Adjusted to prevent navbar overlap */
+  }
+  .we-combine-description, .loki-bake-shop-description {
+      font-size: 22px;
+      margin-left: -120px;
+      margin-right: 60px;
+      max-width: 450px;
+  }
+  .card-container {
+      width: 300px;
+      height: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  #about {
+      padding: 180px 0 150px; /* Increased top padding to push content down */
+  }
+  .about {
+      font-size: 52px;
+      margin-left: 0;
+      margin-top: -150px; /* Adjusted to prevent navbar overlap */
+      text-align: center;
+  }
+  .text-container {
+      justify-content: center;
+      margin-top: 50px;
+  }
+  .we-combine-description, .loki-bake-shop-description {
+      font-size: 20px;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center;
+      max-width: 50%;
+  }
+  .card-container {
+      width: 280px;
+      height: 280px;
+      margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  #about {
+      padding: 170px 0 120px; /* Increased top padding to create more space */
+      margin-top: -70px;
+  }
+  .about {
+      font-size: 46px;
+      margin-top: -20px; /* Adjusted to align properly within section */
+  }
+  .we-combine-description, .loki-bake-shop-description {
+      font-size: 18px;
+      max-width: 95%;
+      margin-top: -20px;
+  }
+  .card-container {
+      width: 250px;
+      height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  #about {
+      padding: 150px 0 100px; /* Adjusted padding for smallest screens */
+      margin-top: -60px;
+  }
+  .about {
+      font-size: 40px;
+      margin-top: -20px; /* Adjusted for small screens */
+  }
+  .we-combine-description, .loki-bake-shop-description {
+      font-size: 16px;
+  }
+  .card-container {
+      width: 220px;
+      height: 220px;
+  }
+}
+
+/* Collection Section */
+.collection-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f6f0e4;
+}
+
+.browse-our-collection {
+  font-family: 'Dancing Script', sans-serif;
+  font-size: 48px;
+  color: #2e2e2e;
+  margin-bottom: 30px;
+}
+
+/* Card Container */
+.card {
+  position: relative;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: none; /* Override Bootstrap's default border */
+}
+
+/* Collection Section */
+.collection-section {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f6f0e4;
+}
+
+.browse-our-collection {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 48px;
+    color: #2e2e2e;
+    margin-bottom: 30px;
+}
+
+/* Card Container */
+.card {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay for Hover Effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for the overlay */
+    opacity: 0; /* Hidden initially */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+    width: 300px;
+}
+
+/* Overlay Text */
+.overlay-text {
+    font-family: "Lora", serif;
+    font-size: 36px;
+    color: #fff8e7;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Show Overlay on Hover */
+.card:hover .overlay {
+    opacity: 1; /* Make overlay visible when hovering */
+}
+
+/* Optional: Add Scale Effect for Card Image */
+.card:hover .card-image {
+    transform: scale(1.1); /* Slightly zoom in the image on hover */
+}
+
+
+/* Card Hover Effect */
+.card:hover .card-image {
+    transform: scale(1.1);
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* Card Link */
+.card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablets */
+  .browse-our-collection {
+      font-size: 5vw;
+  }
+
+  .card {
+      width: 30vw;
+      height: 30vw;
+  }
+
+  .overlay-text {
+      font-size: 2.5vw;
+      margin-left: -3rem;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .card {
+    margin: 15px auto;
+    width: 90%;
+    height: 35vw;
+  }
+  
+  .overlay-text {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) { /* Phones */
+  .browse-our-collection {
+      font-size: 6vw;
+  }
+
+  .card {
+      width: 40vw;
+      height: 40vw;
+  }
+
+  .overlay-text {
+      font-size: 3.5vw;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .collection-section {
+    padding: 30px 10px;
+  }
+  
+  .browse-our-collection {
+    font-size: 7vw;
+  }
+  
+  .card {
+    width: 90%;
+    height: 60vw;
+    margin: 10px auto;
+  }
+  
+  .overlay-text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) { /* Small Phones */
+  .browse-our-collection {
+      font-size: 8vw;
+  }
+
+  .card {
+      width: 80vw;
+      height: 80vw;
+  }
+
+  .overlay-text {
+      font-size: 4.5vw;
+  }
+}
+
+/* Extra Small Phones */
+@media (max-width: 375px) {
+  .card {
+    height: 80vw;
+  }
+  
+  .browse-our-collection {
+    margin-bottom: 15px;
+  }
+}
+
+/* Touch Device Support */
+@media (hover: none) {
+  .overlay {
+    opacity: 0.8; /* Always show overlay on touch devices, but slightly transparent */
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .card-image {
+    transform: scale(1.03); /* Slight zoom by default */
+  }
+}
+
+/* Sweet Collection  */
+.sweet-collection {
+  color: #fff8e7;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px; /* Adjusted font size */
+  font-weight: 400;
+  position: absolute;
+  top: 10%; /* Position above the .sweet-collection-text */
+  left: 10%; /* Adjust horizontal position */
+  margin: 20px 100px; /* Adjusted margin */
+  padding: 10px 20px; /* Added padding for spacing inside */
+  max-width: 600px; /* Limit the width to prevent overflowing */
+  z-index: 2; /* Ensure it stays above the text */
+}
+
+.sweet-collection-text {
+  color: #fff8e7;
+  text-align: left; /* Changed to left-align */
+  font-family: "Lora", serif;
+  font-size: 18px; /* Adjusted font size */
+  font-weight: 400;
+  margin-left: -30%;
+  width: 80%; /* Keeps it centered */
+  line-height: 1.6;
+  max-width: 400px; /* Limiting the width */
+  z-index: 1;
+}
+
+/* sweet collection */
+.group-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Rectangle-6 */
+.rectangle-6 {
+  background: rgba(93, 64, 55, 0.95);
+  border-radius: 20px;
+  border: 5px solid #d4a373;
+  width: 90%; /* Adjusted width */
+  max-width: 1173px;
+  height: 900px;
+  margin-top: 150px;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  
+}
+
+/* Header Logo inside Rectangle */
+.header-logo-2 {
+  width: 80%; /* Adjust width to fit inside the rectangle */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image fits without stretching */
+  position: absolute;
+  top: 50%; /* Centers logo vertically */
+  left: 50%; /* Centers logo horizontally */
+  transform: translate(-50%, -50%); /* Adjust to center logo */
+  opacity: 0.5;
+}
+
+.plating {
+      border-radius: 50px;
+      border: 10px solid #d4a373;
+      width: 35%; /* Makes the image responsive */
+      height: auto;
+      position: absolute;
+      top: 50%; /* Center vertically */
+      right: -2%; /* Adjust for right positioning */
+      transform: translateY(-50%) rotate(8deg); /* Adjust vertical centering and rotation */
+      object-fit: cover;
+      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+      z-index: 1; /* Ensure it stays on top */
+
+}
+
+
+.image-1 {
+  border-radius: 12px;
+  width: 137.1px;
+  height: 168.28px;
+  position: absolute;
+  top: 15%; /* Adjusted position to be vertically centered */
+  left: 85%; /* Center horizontally */
+  transform: translateX(-50%) rotate(8deg); /* Fine-tune centering */
+  object-fit: cover;
+  aspect-ratio: 137.1/168.28;
+  z-index: 2; /* Ensure it stays above the plating */
+}
+
+/* Image 2 (Cookie Sticker) */
+.image-2 {
+  width: 100%; 
+  max-width: 280px; 
+  height: auto;
+  position: absolute;
+  top: 50%; 
+  left:-15%; 
+  transform: translate(-50%, -50%); 
+  object-fit: cover;
+  aspect-ratio: 415/562;
+  background-color: transparent; 
+  z-index: 1; 
+}
+
+.image-3 {
+  width: 100%; 
+  max-width: 250px; 
+  height: auto;
+  position: absolute;
+  top: -10%; 
+  left: -10%; 
+  transform: translate(0, 0); /* Remove translate to keep the image positioned properly */
+  object-fit: contain; /* Display the entire photo without cropping */
+  background-color: transparent; 
+  z-index: 3;
+}
+
+
+/* Fade-in Effect */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+/* Swing Animation */
+@keyframes swing {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+/* Spin Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* For medium screens (laptops) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .rectangle-6 {
+    height: 700px;
+  }
+  
+  .sweet-collection {
+    font-size: 2.5rem;
+  }
+  
+  .sweet-collection-text {
+    font-size: 1rem;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+  
+  .plating {
+    width: 30%;
+    right: 0;
+  }
+}
+
+/* Your existing media queries */
+@media (max-width: 1024px) { /* Tablets */
+  .sweet-collection {
+    font-size: 5vw;
+    margin-left: -2rem;
+    margin-top: -2rem;
+  }
+
+  .sweet-collection-text {
+    font-size: 2vw;
+    margin-left: -10rem;
+    max-width: 15rem; 
+    margin-top: -5rem;
+  }
+
+  .plating {
+    width: 25vw;
+    height: auto;
+    object-fit: contain; /* Display entire image */
+  }
+
+  .image-1 {
+    width: 13vw;
+    height: auto;
+    object-fit: contain; 
+    margin-left: -10px;/* Display entire image */
+  }
+  .image-3 {
+    width: 13vw;
+    height: auto;
+    object-fit: contain;
+    margin-left:-20px; /* Display entire image */
+  }
+  .image-2 {
+    width: 13vw;
+    height: auto;
+    object-fit: contain;
+    margin-left:-80px; /* Display entire image */
+  }
+  .rectangle-6 {
+    height: 600px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) { /* Landscape Mobile Devices */
+  .rectangle-6 {
+    height: 700px;
+    padding: 15px;
+    width: 95%;
+  }
+  
+  .sweet-collection {
+    font-size: 6vw;
+    margin-top: -1rem;
+  }
+
+  .sweet-collection-text {
+    font-size: 2.5vw;
+    margin-left: -10rem;
+    max-width: 15rem;
+    margin-top: 1rem;
+  }
+
+  .plating {
+    width: 35vw;
+    right: -1%;
+  }
+
+  .image-1 {
+    width: 15vw;
+    top: 22%;
+    left: 85%;
+  }
+  
+  .image-2 {
+    width: 20vw;
+    top: 65%;
+    left: 5%;
+  }
+  
+  .image-3 {
+    width: 22vw;
+    top: -5%;
+    left: -5%;
+  }
+}
+
+@media (max-width: 576px) { /* Small Mobile Devices */
+  .rectangle-6 {
+    height: 450px;
+    border-width: 3px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+  
+  .sweet-collection {
+    font-size: 8vw;
+    margin-top: -80px;
+    margin-left: 0;
+  }
+
+  .sweet-collection-text {
+    font-size: 3.5vw;
+    margin-left: 0;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .plating {
+    width: 45vw;
+    border-width: 5px;
+    border-radius: 25px;
+    right: -5%;
+  }
+
+  .image-1 {
+    width: 18vw;
+    top: 12%;
+    left: 85%;
+  }
+  
+  .image-2 {
+    width: 25vw;
+    top: 70%;
+    left: 10%;
+  }
+  
+  .image-3 {
+    width: 25vw;
+    top: -2%;
+    left: -2%;
+  }
+}
+
+@media (max-width: 480px) { /* Portrait Mobile Devices */
+  .rectangle-6 {
+    height: 600px;
+  }
+  
+  .sweet-collection {
+    font-size: 9vw;
+    margin-top: -70px;
+    max-width: 10px;
+  }
+
+  .sweet-collection-text {
+    font-size: 3.8vw;
+    margin-top: 10px;
+    max-width: 60%;
+    margin-left: 10px;
+  }
+  
+  .sweet-collection-text p {
+    margin-bottom: 5px;
+  }
+  
+  .sweet-collection-text br {
+    display: none;
+  }
+
+  .plating {
+    width: 40vw;
+    border-width: 4px;
+    right: 0;
+  }
+
+  .image-1 {
+    width: 20vw;
+    top: 10%;
+    left: 80%;
+  }
+  
+  .image-2 {
+    width: 25vw;
+    max-width: 100px;
+    top: 75%;
+    left: 15%;
+    display: none;
+  }
+  
+  .image-3 {
+    width: 25vw;
+    max-width: 100px;
+    top: 0%;
+    left: 0%;
+    display: none;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 375px) {
+  .rectangle-6 {
+    height: 350px;
+    padding: 10px;
+  }
+  
+  .sweet-collection {
+    font-size: 18px;
+    margin-top: -25px;
+    text-align: center;
+    max-width: 95%;
+    margin-left: -40px;
+  
+  }
+  .image-1{
+    display: none;
+  }
+  .sweet-collection-text {
+    font-size: 12px;
+    max-width: 95%;
+  }
+  .header-logo-2 {
+    width: 90%;
+  }
+  .plating{
+    display: none;
+  }
+}
+
+
+/* Contact Section Styling */
+/* Global reset */
+a,
+button,
+input,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  background: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+menu, ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body and general structure */
+.desktop-8 {
+  background: #7f4b3b;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding: 0;
+  margin-top: 100px;
+}
+
+/* Rectangle 7 - Main content (Logo, Message) */
+.rectangle-7 {
+  border-radius: 50px;
+  width: 100%;
+  height: auto;
+  min-height: 70vh;
+  position: relative;
+  margin: 0 auto;
+  top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
+/* Centered logo */
+.header-logo-3 {
+  opacity: 0.5;
+  width: 15vw;
+  height: 15vw;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+/* Contact information styles */
+.contact-info {
+  color: #fff8e7;
+  text-align: center;
+  font-family: "Lora-Regular", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  position: relative;
+  margin: 0.5rem auto;
+  width: 90%;
+  max-width: 300px;
+}
+
+/* Large message text with responsiveness */
+.message-us {
+  color: #fff8e7;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem; /* Base font size */
+  font-weight: 200;
+  position: relative;
+  margin: 4rem auto;
+  width: 90%;
+  max-width: 1090px;
+}
+
+.social-icons a {
+  color: #fdf2e3;
+  font-size: 24px;
+  margin: 0 0;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f08a5d; /* change to your preferred hover color */
+}
+
+
+/* Rectangle 15 (container for social media and other content) */
+.rectangle-15 {
+  background: rgba(217, 217, 217, 0);
+  border-radius: 30px;
+  border-style: solid;
+  border-color: #fdf2e3;
+  border-width: 3px;
+  width: 90%;
+  max-width: 699px;
+  height: auto;
+  min-height: 100px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive Design for Medium Screens (e.g., tablets) */
+@media screen and (max-width: 1024px) {
+  .rectangle-7 {
+    width: 85%;
+  }
+
+  .message-us {
+    font-size: 1.8rem; /* Reduced size for smaller screens */
+  }
+
+  .header-logo-3 {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .social-icons i {
+    width: 35px;
+    height: 35px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+@media screen and (max-width: 768px) {
+  .rectangle-7 {
+    width: 90%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.6rem; /* Slightly smaller for readability */
+  }
+
+  .header-logo-3 {
+    width: 25vw;
+    height: 25vw;
+  }
+
+  .social-icons i {
+    width: 30px;
+    height: 30px;
+  }
+
+  .contact-info {
+    font-size: 1.2rem;
+  }
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 480px) {
+  .rectangle-7 {
+    width: 95%;
+    height: auto;
+  }
+
+  .message-us {
+    font-size: 1.4rem; /* Further reduced size for mobile */
+  }
+
+  .header-logo-3 {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .social-icons i {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile Devices (Phones in Portrait mode) */
+@media screen and (max-width: 360px) {
+  .rectangle-7 {
+    width: 100%;
+  }
+
+  .message-us {
+    font-size: 1.2rem; /* Even smaller for very small screens */
+  }
+
+  .header-logo-3 {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .social-icons i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #fff8e7; /* Same color as the main section */
+    color: #7f4b3b;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: -10px;
+  }
+  
+  .footer-content p {
+    font-family: "Lora-Regular", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  
+  /* Social icons and other elements */
+  .social-icons {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .social-icons i {
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Responsive Design for Medium Screens (e.g., tablets) */
+  @media screen and (max-width: 1024px) {
+    /* Adjust Rectangle 7 for better display on medium screens */
+    .rectangle-7 {
+      width: 85%;
+      padding: 1rem;
+    }
+  
+    /* Reduce font size of message */
+    .message-us {
+      font-size: 1.6rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 20vw;
+      height: 20vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 35px;
+      height: 35px;
+    }
+  
+    /* Adjust font size of contact info */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Responsive Design for Smaller Screens (e.g., tablets in portrait mode) */
+  @media screen and (max-width: 768px) {
+    .rectangle-7 {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    /* Slightly smaller message font size */
+    .message-us {
+      font-size: 1.5rem;
+    }
+  
+    /* Adjust the logo size */
+    .header-logo-3 {
+      width: 25vw;
+      height: 25vw;
+    }
+  
+    /* Adjust social icon size */
+    .social-icons i {
+      width: 30px;
+      height: 30px;
+    }
+  
+    /* Slightly larger contact info font size */
+    .contact-info {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Responsive Design for Mobile Screens */
+  @media screen and (max-width: 480px) {
+    .rectangle-7 {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    /* Adjust message font size for mobile */
+    .message-us {
+      font-size: 1.4rem;
+    }
+  
+    /* Adjust logo size for mobile */
+    .header-logo-3 {
+      width: 30vw;
+      height: 30vw;
+    }
+  
+    /* Reduce social icon size for mobile */
+    .social-icons i {
+      width: 25px;
+      height: 25px;
+    }
+  
+    /* Adjust contact info font size for mobile */
+    .contact-info {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extra Small Mobile Devices (Phones in Portrait mode) */
+  @media screen and (max-width: 360px) {
+    .rectangle-7 {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    /* Further reduce message font size */
+    .message-us {
+      font-size: 1.2rem;
+    }
+  
+    /* Reduce logo size further for very small screens */
+    .header-logo-3 {
+      width: 35vw;
+      height: 35vw;
+    }
+  
+    /* Reduce social icon size further */
+    .social-icons i {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Further reduce contact info font size */
+    .contact-info {
+      font-size: 0.9rem;
+    }
+  }
+  
